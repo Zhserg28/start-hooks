@@ -7,7 +7,9 @@ const ComponentList = ({ children }) => {
         <div>
             <ul>
                 {React.Children.map(children, (child) => {
-                    return React.cloneElement(child, { index: String(indexComponent.current++) });
+                    return React.cloneElement(child, {
+                        index: String(indexComponent.current++)
+                    });
                 })}
             </ul>
         </div>
